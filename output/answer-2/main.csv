@@ -1,0 +1,8 @@
+Question-2. Consider input file as /input/question-2/main.csv and give the output to /output/answer-2/main.csv and upload solution code file also to the
+same folder. For each occupation, calculate the minimum and maximum ages
+
+
+//source code
+import pandas
+ds=pd.read_csv("internship-test2/input/question-2/main.csv")
+ds.groupby('occupation')['age'].agg(['min','max'])
