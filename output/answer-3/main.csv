@@ -1,0 +1,9 @@
+Question-3. Consider input file as /input/question-3/main.csv and give the output to /output/answer-3/main.csv and upload solution code file also 
+to the same folder. Sort the teams by Red Cards, then to Yellow Cards
+
+
+//source code
+import pandas as pd
+ds=pd.read_csv("internship-test2/input/question-3/main.csv")
+data=ds[['Team','Yellow Cards','Red Cards']]
+data.sort_values(['Red Cards','Yellow Cards'],ascending=False)
