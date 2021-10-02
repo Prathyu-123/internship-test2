@@ -1,0 +1,11 @@
+
+Question-1. Consider input file as /input/question-1/main.csv and give the output to /output/answer-1/main.csv and upload solution code file also to the
+same folder. Group the year by decades and sum the values
+
+
+//source code
+import pandas as pd
+ds=pd.read_csv("internship-test2/input/question-1/main.csv")
+ds.drop('Total',axis='columns',inplace=True)
+a=ds.groupby((ds.index.Year//10)*10).sum()
+a
